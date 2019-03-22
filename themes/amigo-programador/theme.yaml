@@ -1,0 +1,9 @@
+name: 'Amigo Programador'
+description: ''
+author: 'Allan Brito'
+homepage: 'https://allanbrito.com.br'
+code: 'Amigo Programador'
+require:
+    - RainLab.User
+    - RainLab.Blog
+    - RainLab.Forum
