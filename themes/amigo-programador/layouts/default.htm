@@ -2,23 +2,200 @@ description = "Default layout"
 
 [session]
 security = "all"
+
+[menu MenuPrincipal]
+start = "id-4"
+activeNode = 0
+listItemClasses = "nav__dropdown"
+primaryClasses = "nav__menu"
+secondaryClasses = "nav__dropdown-menu"
+numberOfLevels = 2
+
+[menu MenuPrincipalMobile]
+start = "id-4"
+activeNode = 0
+listItemClasses = "sidenav__menu-link"
+primaryClasses = "sidenav__menu"
+secondaryClasses = "sidenav__menu-dropdown"
+numberOfLevels = 2
 ==
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>October CMS - {{ this.page.title }}</title>
-        <meta name="description" content="{{ this.page.meta_description }}">
-        <meta name="title" content="{{ this.page.meta_title }}">
-        <meta name="author" content="October CMS">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}" />
-        {% styles %}
-        <link href="{{ [
-            'assets/less/theme.less'
-        ]|theme }}" rel="stylesheet">
-    </head>
-    <body>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Amigo Programador - {{ this.page.title }}</title>
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <meta name="author" content="Amigo Programador">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" type="image/png" href="{{ 'assets/images/logo.png'|theme }}" />
+    {% styles %}
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins:400,600,700%7CRoboto:400,400i,700' rel='stylesheet'>
+    
+    <!-- Css -->
+    <link href="{{ [
+        'assets/css/bootstrap.min.css',
+        'assets/css/font-icons.css',
+        'assets/sass/style.scss',
+    ]|theme }}" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="{{ 'assets/img/favicon.ico'|theme }}">
+    <link rel="apple-touch-icon" href="{{ 'assets/img/apple-touch-icon.png'|theme }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ 'assets/img/apple-touch-icon-72x72.png'|theme }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ 'assets/img/apple-touch-icon-114x114.png'|theme }}">
+
+    <!-- Lazyload -->
+    <script src="{{ 'assets/js/lazysizes.min.js'|theme }}"></script>
+</head>
+
+<body class="bg-darker">
+
+  <!-- Preloader -->
+  <!-- <div class="loader-mask">
+    <div class="loader">
+      <div></div>
+    </div>
+  </div> -->
+
+  <!-- Bg Overlay -->
+  <div class="content-overlay"></div>
+
+  <!-- Subscribe Modal -->
+  <div class="modal fade" id="subscribe-modal" tabindex="-1" role="dialog" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="subscribeModalLabel">Subscribe for Newsletter</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form class="mc4wp-form" method="post">
+            <div class="mc4wp-form-fields">
+              <p>
+                <i class="mc4wp-form-icon ui-email"></i>
+                <input type="email" name="EMAIL" placeholder="Your email" required="">
+              </p>
+              <p>
+                <input type="submit" class="btn btn-md btn-color" value="Subscribe">
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div> <!-- end subscribe modal -->
+  
+
+  <!-- Mobile Sidenav -->    
+  <header class="sidenav" id="sidenav">
+    <!-- Search -->
+    <div class="sidenav__search-mobile">
+      <form method="get" class="sidenav__search-mobile-form">
+        <input type="search" class="sidenav__search-mobile-input" placeholder="Search..." aria-label="Search input">
+        <button type="submit" class="sidenav__search-mobile-submit" aria-label="Submit search">
+          <i class="ui-search"></i>
+        </button>
+      </form>
+    </div>
+
+    <nav>
+        {% component "MenuPrincipalMobile" %}
+    </nav>
+
+    <div class="socials sidenav__socials "> 
+      <a class="social-facebook" href="#" target="_blank" aria-label="facebook">
+        <i class="ui-facebook"></i>
+      </a>
+      <a class="social-twitter" href="#" target="_blank" aria-label="twitter">
+        <i class="ui-twitter"></i>
+      </a>
+      <a class="social-youtube" href="#" target="_blank" aria-label="youtube">
+        <i class="ui-youtube"></i>
+      </a>
+    </div>
+  </header> <!-- end mobile sidenav -->
+
+  <!-- Navigation -->
+  <header class="nav">
+
+    <div class="nav__holder nav--sticky">
+      <div class="container relative">
+
+        <div class="flex-parent">
+
+          <!-- Mobile Menu Button -->
+          <button class="nav-icon-toggle" id="nav-icon-toggle" aria-label="Open mobile menu">
+            <span class="nav-icon-toggle__box">
+              <span class="nav-icon-toggle__inner"></span>
+            </span>
+          </button> <!-- end mobile menu button -->
+
+          <!-- Logo -->
+          <a href="/" class="logo">
+            <img class="logo__img" src="{{ 'assets/img/logo_light.png'|theme }}" srcset="{{ 'assets/img/logo_light.png'|theme }} 1x, {{ 'assets/img/logo_light@2x.png'|theme }} 2x" alt="logo">
+          </a>
+
+          <!-- Nav-wrap -->
+          <nav class="flex-child nav__wrap d-none d-lg-block">              
+            {% component "MenuPrincipal" %}
+          </nav> <!-- end nav-wrap -->
+
+          <!-- Nav Right -->
+          <div class="nav__right nav--align-right d-none d-lg-flex">
+
+            <!-- Socials -->
+            <div class="nav__right-item socials socials--nobase nav__socials "> 
+              <a class="social-facebook" href="#" target="_blank">
+                <i class="ui-facebook"></i>
+              </a>
+              <a class="social-twitter" href="#" target="_blank">
+                <i class="ui-twitter"></i>
+              </a>
+              <a class="social-youtube" href="#" target="_blank">
+                <i class="ui-youtube"></i>
+              </a>
+            </div>
+
+            <div class="nav__right-item">
+              <a href="" class="nav__subscribe" data-toggle="modal" data-target="#subscribe-modal">Subscribe</a>
+            </div>
+
+            <!-- Search -->
+            <div class="nav__right-item nav__search">
+              <a href="#" class="nav__search-trigger" id="nav__search-trigger">
+                <i class="ui-search nav__search-trigger-icon"></i>
+              </a>
+              <div class="nav__search-box" id="nav__search-box">
+                <form class="nav__search-form">
+                  <input type="text" placeholder="Search an article" class="nav__search-input">
+                  <button type="submit" class="nav__search-button btn btn-md btn-color btn-button">
+                    <i class="ui-search nav__search-icon"></i>
+                  </button>
+                </form>
+              </div>
+              
+            </div>
+
+          </div> <!-- end nav right -->  
+      
+        </div> <!-- end flex-parent -->
+      </div> <!-- end container -->
+
+    </div>
+  </header> <!-- end navigation -->
+  
+  <main class="main-container" id="main-container">
+
+
+
+
+
+
 
         <!-- Header -->
         <header id="layout-header">
@@ -36,11 +213,12 @@ security = "all"
                         <a class="navbar-brand" href="{{ 'home'|page }}">Vanilla</a>
                     </div>
                     <div class="collapse navbar-collapse navbar-main-collapse">
-                        <ul class="nav navbar-nav">
+                        {% component "menu" %}
+                        <!-- <ul class="nav navbar-nav">
                             <li class="{% if this.page.id == 'account' %}active{% endif %}"><a href="{{ 'account'|page }}">Account</a></li>
                             <li class="{% if this.page.id == 'blog' %}active{% endif %}"><a href="{{ 'blog'|page }}">Blog</a></li>
                             <li class="{% if this.page.id == 'forum' %}active{% endif %}"><a href="{{ 'forum'|page }}">Forum</a></li>
-                        </ul>
+                        </ul> -->
                         <ul class="nav navbar-nav navbar-right">
                             {% if user %}
                                 <li><a href="#" data-request="onLogout">Logout</a></li>
@@ -74,20 +252,13 @@ security = "all"
 
         <!-- Scripts -->
         <script src="{{ [
-            'assets/javascript/jquery.js',
-            'assets/vendor/bootstrap/js/transition.js',
-            'assets/vendor/bootstrap/js/alert.js',
-            'assets/vendor/bootstrap/js/button.js',
-            'assets/vendor/bootstrap/js/carousel.js',
-            'assets/vendor/bootstrap/js/collapse.js',
-            'assets/vendor/bootstrap/js/dropdown.js',
-            'assets/vendor/bootstrap/js/modal.js',
-            'assets/vendor/bootstrap/js/tooltip.js',
-            'assets/vendor/bootstrap/js/popover.js',
-            'assets/vendor/bootstrap/js/scrollspy.js',
-            'assets/vendor/bootstrap/js/tab.js',
-            'assets/vendor/bootstrap/js/affix.js',
-            'assets/javascript/app.js'
+            'assets/js/jquery.min.js',
+            'assets/js/bootstrap.min.js',
+            'assets/js/easing.min.js',
+            'assets/js/flickity.pkgd.min.js',
+            'assets/js/twitterFetcher_min.js',
+            'assets/js/modernizr.min.js',
+            'assets/js/scripts.js',
         ]|theme }}"></script>
         {% framework extras %}
         {% scripts %}
