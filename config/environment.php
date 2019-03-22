@@ -27,8 +27,9 @@ return [
     */
 
     'hosts' => [
-
-        'localhost' => 'dev',
+        'localhost'                  => 'dev',
+        'amigoprogramador.localhost' => 'dev',
+        'amigoprogramador.com.br'    => 'prod',
 
     ],
 
