@@ -1,1 +1,1 @@
-/var/www/html/myoctober/index.php
+/var/www/html/amigoprogramador/index.php
