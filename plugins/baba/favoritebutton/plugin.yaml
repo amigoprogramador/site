@@ -1,0 +1,6 @@
+plugin:
+    name: 'baba.favoritebutton::lang.plugin.name'
+    description: 'baba.favoritebutton::lang.plugin.description'
+    author: BABA
+    icon: oc-icon-bookmark
+    homepage: 'https://web4theme.com'

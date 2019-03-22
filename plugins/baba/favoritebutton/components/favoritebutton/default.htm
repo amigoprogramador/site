@@ -1,0 +1,16 @@
+{% if haspost==1 %}
+    <a href="javascript:;"  class="favoritebutton"
+        data-request="{{ __SELF__ }}::onFavoritePost"
+        data-request-update="'{{ __SELF__ }}::result': '#{{__SELF__.id}}'"
+        data-request-data="post_id:'{{ postId }}'"
+        id="{{__SELF__.id}}"
+       >
+        {% if isfavorited==1 %}
+            <i class="fa fa-heart icon-heart"></i>
+            {% else %}
+            <i class="fa fa-heart-o icon-heart-empty"></i>
+        {% endif %}
+        {{ post.getFavoritesCountAttribute }}
+    </a>
+    &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-eye icon-eye-open"></i>{{ postviews }} views
+{% endif %}

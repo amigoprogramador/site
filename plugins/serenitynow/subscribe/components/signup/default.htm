@@ -1,0 +1,11 @@
+<form method="post" class="form-inline" id="signup">
+    <div class="form-group">                
+        <input type="email" class="form-control" name="email" placeholder="you@email.com">    
+        <button type="button" class="btn btn-success"
+                title="Subscribe!"
+                data-request="{{__SELF__}}::onSignup"
+                data-request-success="alert('Thank you! Please confirm your subscription by clicking on the confirmation link in your email.'); document.getElementById('signup').reset();"
+        >Subscribe</button>
+    </div>
+</form> 
+

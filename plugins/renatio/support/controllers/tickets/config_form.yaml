@@ -1,0 +1,27 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: renatio.support::lang.ticket.name
+
+# Model Form Field configuration
+form: $/renatio/support/models/ticket/fields.yaml
+
+# Model Class name
+modelClass: Renatio\Support\Models\Ticket
+
+# Default redirect location
+defaultRedirect: renatio/support/tickets
+
+# Create page
+create:
+    title: renatio.support::lang.ticket.create
+    redirect: renatio/support/tickets/update/:id
+    redirectClose: renatio/support/tickets
+
+# Update page
+update:
+    title: renatio.support::lang.ticket.edit
+    redirect: renatio/support/tickets
+    redirectClose: renatio/support/tickets

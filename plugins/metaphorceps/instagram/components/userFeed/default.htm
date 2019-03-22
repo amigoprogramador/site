@@ -1,0 +1,10 @@
+{% for m in __SELF__.media %}
+  {% if m.getType() == 'image' %}
+    <img src="{{ m.getLowResImage().url }}" >
+  {% elseif m.getType() == 'video' %}
+    <video width="480" height="480" controls>
+      <source src="{{ m.getLowResVideo().url }}" 
+      type="video/mp4"/>
+    </video>
+  {% endif %}
+{% endfor %}

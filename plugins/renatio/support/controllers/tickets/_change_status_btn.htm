@@ -1,0 +1,32 @@
+<div class="btn-group">
+    <div class="dropdown">
+
+        <a href="#" data-toggle="dropdown" class="btn btn-primary oc-icon-info">
+            <?php echo e(trans('renatio.support::lang.toolbar.update_status')); ?>
+        </a>
+
+        <ul class="dropdown-menu" role="menu">
+
+            <?php foreach($statuses as $key => $status) : ?>
+
+                <?php if ($model->status->id != $key) : ?>
+
+                    <li role="presentation">
+                        <a role="menuitem"
+                           href="#"
+                           tabindex="-1"
+                           data-request="onChangeStatus"
+                           data-request-success="$('body').removeClass('dropdown-open').click();"
+                           data-stripe-load-indicator
+                           data-request-data="status:<?php echo $key; ?>">
+                            <?php echo $status; ?>
+                        </a>
+                    </li>
+
+                <?php endif; ?>
+
+            <?php endforeach; ?>
+
+        </ul>
+    </div>
+</div>

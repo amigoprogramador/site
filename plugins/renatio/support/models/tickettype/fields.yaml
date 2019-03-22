@@ -1,0 +1,18 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+
+    name:
+        label: renatio.support::lang.field.name
+
+    description:
+        label: renatio.support::lang.field.description
+        type: textarea
+        size: small
+
+    is_active:
+        label: renatio.support::lang.field.is_active
+        type: switch
+        default: true

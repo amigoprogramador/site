@@ -1,0 +1,10 @@
+{% set series = __SELF__.series %}
+
+<h2>{{ series.title }} <small>({{ series.postCount }} Posts)</small></h2>
+<div class="lead">{{ series.description|raw }}</div>
+
+{% partial '@posts' %}
+
+{% if __SELF__.showRelated %}
+    {% partial __SELF__~"::related_series" %}
+{% endif %}

@@ -1,0 +1,8 @@
+<?php if ($model->is_activated): ?>
+<a
+  class="btn btn-primary"
+  href="<?= Backend::url('studiobosco/loginasuser') . '?id=' . $model->id; ?>"
+>
+<?= Lang::get('studiobosco.loginasuser::lang.loginasuser') ?>
+</a>
+<?php endif; ?>

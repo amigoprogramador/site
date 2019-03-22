@@ -1,0 +1,20 @@
+{
+    "name": "pkleindienst/octobercms-github-projects",
+    "description": "",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pascal Kleindienst",
+            "email": "mail@pascalkleindienst.de"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.5.9",
+        "ext-curl": "*"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "~2.3",
+        "codeclimate/php-test-reporter": "dev-master"
+    }
+}

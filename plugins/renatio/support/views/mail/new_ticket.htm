@@ -1,0 +1,22 @@
+subject = "{{ ticket.subject }} (#{{ ticket.id }})"
+==
+
+Hello {{ name }},
+
+{{ owner }} created new support ticket #{{ ticket.id }}.
+
+{{ ticket.subject }}
+
+{{ ticket.content|md|striptags }}
+
+==
+
+<p>Hello {{ name }},</p>
+
+<p>{{ owner }} created new support ticket <a href="{{ url }}">#{{ ticket.id }}</a>.</p>
+
+<hr>
+
+<p><strong>{{ ticket.subject }}</strong></p>
+
+<p>{{ ticket.content|md|raw }}</p>

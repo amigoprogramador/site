@@ -1,0 +1,6 @@
+plugin:
+    name: 'alekseyp.googletagmanager::lang.plugin.name'
+    description: 'alekseyp.googletagmanager::lang.plugin.description'
+    author: AlekseyP
+    icon: oc-icon-google
+    homepage: 'https://github.com/alekseyp/octobercms-googletagmanager'

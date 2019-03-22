@@ -1,0 +1,18 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+
+    name:
+        label: ebussola.feedback::lang.feedback.name
+
+    email:
+        label: ebussola.feedback::lang.feedback.email
+
+    message:
+        label: ebussola.feedback::lang.feedback.message
+        type: textarea

@@ -1,0 +1,57 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+scopes:
+
+    user:
+
+        # Filter name
+        label: renatio.support::lang.toolbar.owner
+
+        # Model Class name
+        modelClass: Backend\Models\User
+
+        # Model attribute to display for the name
+        nameFrom: full_name
+
+        # Apply query conditions
+        conditions: user_id in (:filtered)
+
+    status:
+
+        # Filter name
+        label: renatio.support::lang.field.status
+
+        # Model Class name
+        modelClass: Renatio\Support\Models\TicketStatus
+
+        # Model attribute to display for the name
+        nameFrom: name
+
+        # Apply query conditions
+        conditions: status_id in (:filtered)
+
+    type:
+
+        # Filter name
+        label: renatio.support::lang.field.type
+
+        # Model Class name
+        modelClass: Renatio\Support\Models\TicketType
+
+        # Model attribute to display for the name
+        nameFrom: name
+
+        # Apply query conditions
+        conditions: type_id in (:filtered)
+
+    is_closed:
+
+        # Filter name
+        label: renatio.support::lang.filters.hide_closed
+
+        # Filter type
+        type: checkbox
+
+        # Apply query conditions
+        conditions: is_closed <> true

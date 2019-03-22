@@ -1,0 +1,6 @@
+fields:
+    firebase_url:
+        label: URL
+
+    firebase_token:
+        label: Token

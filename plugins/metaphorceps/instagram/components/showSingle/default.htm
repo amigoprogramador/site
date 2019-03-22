@@ -1,0 +1,8 @@
+{% if __SELF__.single.getType() == 'image' %}
+  <img src="{{ __SELF__.single.getLowResImage().url }}" >
+{% elseif __SELF__.single.getType() == 'video' %}
+  <video width="480" height="480" controls>
+    <source src="{{ __SELF__.single.getLowResVideo().url }}" 
+    type="video/mp4"/>
+  </video>
+{% endif %}

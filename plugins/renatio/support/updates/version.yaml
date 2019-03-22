@@ -1,0 +1,8 @@
+1.0.1:
+    - First version of Support plugin.
+    - create_tickets_table.php
+    - create_ticket_types_table.php
+    - create_ticket_messages_table.php
+    - create_ticket_statuses_table.php
+    - seed_ticket_statuses_table.php
+    - seed_ticket_types_table.php

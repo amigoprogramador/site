@@ -1,0 +1,26 @@
+<div class="message-item <?php if ($message->isOwner()) : ?>owner<?php endif; ?>">
+
+    <div class="hidden-sm hidden-xs col-md-1 <?php if ($message->isOwner()) : ?>pull-right<?php else : ?>pull-left<?php endif; ?>">
+        <img class="<?php if ($message->isOwner()) : ?>pull-left<?php else : ?>pull-right<?php endif; ?>"
+             src="<?php echo e($message->user->getAvatarThumb(50, 'auto')); ?>">
+    </div>
+
+
+    <div class="body col-md-7 <?php if ($message->isOwner()) : ?>pull-right<?php else : ?>pull-left<?php endif; ?>">
+
+        <div class="content">
+            <span class="chat-arrow"></span>
+            <?php echo Markdown::parse(e($message->reply)); ?>
+        </div>
+
+        <span class="from">
+            <?php echo e($message->user->full_name); ?>
+            <?php echo e(trans('renatio.support::lang.message.at')); ?>
+            <?php echo e($message->created_at->format('d.m.Y H:i:s')); ?>
+        </span>
+
+    </div>
+
+    <div class="clearfix"></div>
+
+</div>

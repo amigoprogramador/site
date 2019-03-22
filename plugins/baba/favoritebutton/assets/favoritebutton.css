@@ -1,0 +1,38 @@
+a.favoritebutton{
+    text-decoration: none;
+}
+a.favoritebutton:hover {
+    text-decoration: none;
+}
+a.favoritebutton:focus{
+    text-decoration: none;
+}
+.easyPaginateNav a {padding:5px;}
+.easyPaginateNav a.current {font-weight:bold;text-decoration:underline;}
+
+
+.postusers{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 20px;
+}
+.postusers li {
+    float: left;
+    width: 24px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.postusers li img{
+  vertical-align: middle;
+}
+
+img.postuseravt{
+    width:20px;
+    height: auto;
+}
+.postuseravt{
+    border-radius: 999px;
+    height: 20px;
+}

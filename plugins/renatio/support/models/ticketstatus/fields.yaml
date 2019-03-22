@@ -1,0 +1,13 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+
+    name:
+        label: renatio.support::lang.field.name
+
+    is_active:
+        label: renatio.support::lang.field.is_active
+        type: switch
+        default: true

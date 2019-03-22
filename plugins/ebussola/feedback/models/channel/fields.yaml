@@ -1,0 +1,27 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: ebussola.feedback::lang.channel.name
+        required: true
+
+    code:
+        label: ebussola.feedback::lang.channel.code
+        required: true
+        preset:
+            field: name
+            type: slug
+
+    method:
+        label: ebussola.feedback::lang.channel.method
+        type: dropdown
+
+    prevent_save_database:
+        label: ebussola.feedback::lang.channel.prevent_save_database
+        type: checkbox
+
+    warning:
+        type: hint
+        path: $/ebussola/feedback/controllers/channels/_no_action_warning.htm

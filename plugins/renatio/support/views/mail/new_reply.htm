@@ -1,0 +1,20 @@
+subject = "New reply to '{{ ticket.subject }}'"
+==
+
+Hello {{ name }},
+
+there is a new reply for your ticket #{{ ticket.id }}.
+
+{{ ticket.subject }}
+
+{{ reply|md|striptags }}
+
+==
+
+<p>Hello {{ name }},</p>
+
+<p>there is a new reply for ticket <a href="{{ url }}">#{{ ticket.id }}</a>.</p>
+
+<hr>
+
+<p>{{ reply|md|raw }}</p>

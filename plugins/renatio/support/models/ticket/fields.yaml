@@ -1,0 +1,62 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+
+    ticket_toolbar@update:
+        type: ticket_toolbar
+
+    ticket_toolbar@preview:
+        type: ticket_toolbar
+
+tabs:
+
+    fields:
+
+        ticket_messages@update:
+            type: ticket_messages
+            tab: renatio.support::lang.tab.messages
+
+        ticket_messages@preview:
+            type: ticket_messages
+            tab: renatio.support::lang.tab.messages
+
+        reply@update:
+            tab: renatio.support::lang.tab.messages
+            comment: renatio.support::lang.field.content_comment
+            type: markdown
+            size: small
+            span: right
+
+        send_btn@update:
+            tab: renatio.support::lang.tab.messages
+            type: partial
+            path: $/renatio/support/controllers/tickets/_send_btn.htm
+
+        subject:
+            label: renatio.support::lang.field.subject
+            tab: renatio.support::lang.tab.details
+            span: left
+
+        type:
+            label: renatio.support::lang.field.type
+            tab: renatio.support::lang.tab.details
+            type: relation
+            nameFrom: name
+            descriptionFrom: description
+            span: right
+
+        content:
+            label: renatio.support::lang.field.content
+            tab: renatio.support::lang.tab.details
+            comment: renatio.support::lang.field.content_comment
+            type: markdown
+            size: huge
+
+        attachments:
+            label: renatio.support::lang.field.attachments
+            tab: renatio.support::lang.tab.details
+            type: fileupload
+            mode: file
+            comment: renatio.support::lang.field.attachments_comment

@@ -1,0 +1,6 @@
+{% if isfavorited==1 %}
+<i class="fa fa-heart icon-heart"></i>
+{% else %}
+<i class="fa fa-heart-o icon-heart-empty"></i>
+{% endif %}
+{{ post.getFavoritesCountAttribute }}

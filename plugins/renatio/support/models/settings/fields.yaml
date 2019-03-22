@@ -1,0 +1,20 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+tabs:
+
+    fields:
+
+        support_team:
+            tab: renatio.support::lang.tab.support_team
+            span: full
+            type: repeater
+            form:
+                fields:
+                    name:
+                        label: renatio.support::lang.field.name
+                        span: left
+                    email:
+                        label: renatio.support::lang.field.email
+                        span: right

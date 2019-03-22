@@ -1,0 +1,5 @@
+{
+  "require-dev": {
+    "laracasts/testdummy": "~2.0"
+  }
+}

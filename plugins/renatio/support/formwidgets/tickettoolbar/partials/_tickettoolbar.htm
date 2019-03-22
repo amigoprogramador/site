@@ -1,0 +1,66 @@
+<div class="scoreboard">
+    <div data-control="toolbar">
+
+        <div class="scoreboard-item title-value">
+            <h4><?php echo e(trans('renatio.support::lang.toolbar.id')); ?></h4>
+
+            <p><?php echo e($model->id); ?></p>
+
+            <p class="description"><?php echo e(trans('renatio.support::lang.toolbar.created')); ?>:
+                <?php echo e($model->created_at); ?></p>
+        </div>
+
+        <div class="scoreboard-item title-value support-status">
+
+            <?php echo $this->makePartial(base_path('plugins/renatio/support/controllers/tickets/support_status')); ?>
+
+        </div>
+
+        <div class="scoreboard-item title-value">
+            <h4><?php echo e(trans('renatio.support::lang.toolbar.owner')); ?></h4>
+
+            <p><?php echo e($model->user->full_name); ?></p>
+        </div>
+
+    </div>
+</div>
+<div class="form-buttons">
+
+    <a href="<?php echo Backend::url('renatio/support/tickets'); ?>"
+       class="btn btn-default oc-icon-chevron-left">
+        <?php echo e(trans('renatio.support::lang.ticket.return_to_list')); ?>
+    </a>
+
+    <?php if (BackendAuth::getUser()->hasAccess('renatio.support.access_other_tickets')): ?>
+
+        <span id="change-status">
+
+            <?php echo $this->makePartial(base_path('plugins/renatio/support/controllers/tickets/change_status_btn')); ?>
+
+        </span>
+
+        <span id="close-ticket">
+
+            <?php if ($model->is_closed) : ?>
+
+                <?php echo $this->makePartial(base_path('plugins/renatio/support/controllers/tickets/open_btn')); ?>
+
+            <?php else : ?>
+
+                <?php echo $this->makePartial(base_path('plugins/renatio/support/controllers/tickets/close_btn')); ?>
+
+            <?php endif; ?>
+
+        </span>
+
+        <button type="button"
+                class="oc-icon-trash-o btn btn-danger"
+                data-request="onDelete"
+                data-stripe-load-indicator
+                data-request-confirm="<?= e(trans('renatio.support::lang.ticket.delete_confirm')) ?>">
+            <?php echo e(trans('backend::lang.form.delete')); ?>
+        </button>
+
+    <?php endif; ?>
+
+</div>

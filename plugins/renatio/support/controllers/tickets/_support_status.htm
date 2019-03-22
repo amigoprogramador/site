@@ -1,0 +1,8 @@
+<h4><?php echo e(trans('renatio.support::lang.toolbar.status')); ?></h4>
+
+<p><?php echo e($model->status->name); ?></p>
+
+<p class="description">
+    <?php echo e(trans('renatio.support::lang.toolbar.since')); ?>:
+    <?php echo e($model->status_updated_at); ?>
+</p>

@@ -1,0 +1,41 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+
+    id:
+        label: renatio.support::lang.field.id
+        searchable: true
+
+    subject:
+        label: renatio.support::lang.field.subject
+        searchable: true
+
+    user:
+        label: renatio.support::lang.toolbar.owner
+        relation: user
+        select: concat(first_name, ' ', last_name)
+
+    status:
+        label: renatio.support::lang.field.status
+        relation: status
+        select: name
+
+    type:
+        label: renatio.support::lang.field.type
+        relation: type
+        select: name
+
+    is_closed:
+        label: renatio.support::lang.field.is_closed
+        type: switch
+
+    created_at:
+        label: renatio.support::lang.field.created_at
+        type: datetime
+
+    updated_at:
+        label: renatio.support::lang.field.updated_at
+        type: datetime
+        invisible: true

@@ -1,0 +1,21 @@
+{
+    "name": "metaphorceps/instagram",
+    "description": "Instagram integration plugin for OctoberCMS",
+    "keywords": ["october", "cms", "metaphorceps", "instagram"],
+    "authors": [
+        {
+            "name": "Kyle McLuckie",
+            "email": "kyle.mcluckie@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "php-instagram-api/php-instagram-api": "dev-master"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "https://github.com/kmcluckie/PHP-Instagram-API.git"
+        }
+    ]
+}

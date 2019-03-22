@@ -1,0 +1,20 @@
+<div class="control-scrollbar messages-scroll" data-control="scrollbar">
+
+    <?php if ($ticket->messages->isEmpty()) : ?>
+
+        <p><?php echo e(trans('renatio.support::lang.messages.empty')); ?></p>
+
+    <?php endif; ?>
+
+    <div id="messages-list">
+
+        <?php foreach($ticket->messages as $message) : ?>
+
+            <?php echo $this->makePartial(base_path('plugins/renatio/support/controllers/tickets/message'),
+            ['message' => $message]); ?>
+
+        <?php endforeach; ?>
+
+    </div>
+
+</div>

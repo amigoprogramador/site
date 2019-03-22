@@ -1,0 +1,12 @@
+1.0.1:
+    - Initialize plugin.
+    - create_favorites_table.php    
+1.0.2:
+    - show favorites count
+1.0.3:
+    - Fix the problem that the post id is incorrect
+1.0.4:
+    - add views
+    - create_post_views_table.php
+1.0.5:
+    - add post users component

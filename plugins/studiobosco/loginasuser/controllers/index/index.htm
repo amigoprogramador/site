@@ -1,0 +1,14 @@
+<?php if ($user && $user->is_activated): ?>
+<p class="text-success" role="alert">
+  <?= Lang::get('studiobosco.loginasuser::lang.success', ['username' => $user->username ]) ?>
+</p>
+<?php else: ?>
+<p class="text-warning" role="alert">
+  <?= Lang::get('studiobosco.loginasuser::lang.error') ?>
+</p>
+<?php endif; ?>
+<p>
+  <a class="btn btn-primary" href="javascript:history.back();">
+    <?= Lang::get('studiobosco.loginasuser::lang.back') ?>
+  </a>
+</p>

@@ -1,0 +1,11 @@
+<ul class="postusers" id="{{__SELF__.id}}">
+    {% for user in users %}
+    <li>
+        {% if(user.avatar) %}
+        <img class="postuseravt" src="{{ user.avatar.getpath }}" title=" {{ user.name }}" />
+        {% else %}
+         <img class="postuseravt" src="/plugins/baba/favoritebutton/assets/user-tie-solid.svg"  title=" {{ user.name }}" />
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,25 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    name:
+        label: ebussola.feedback::lang.feedback.name
+        searchable: true
+    email:
+        label: ebussola.feedback::lang.feedback.email
+        searchable: true
+    message:
+        label: ebussola.feedback::lang.feedback.message
+        searchable: true
+    channel:
+        label: ebussola.feedback::lang.channel.one
+        relation: channel
+        select: name
+    created_at:
+        label: ebussola.feedback::lang.feedback.created_at
+        searchable: true
+        type: datetime
