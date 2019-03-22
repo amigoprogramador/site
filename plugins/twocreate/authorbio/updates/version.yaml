@@ -1,0 +1,12 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Migration for backend_users table'
+    - extend_users_table.php
+1.0.3:
+    - 'New fields for profile page'
+    - social_and_other_fields.php
+1.0.4:
+    - 'Update for get labels from language files'
+    - 'Added contact informations tab'
+    - contact_info_fields.php

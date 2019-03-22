@@ -1,0 +1,6 @@
+plugin:
+    name: 'twocreate.authorbio::lang.plugin.name'
+    description: 'twocreate.authorbio::lang.plugin.description'
+    author: '2CREATE advertising'
+    icon: oc-icon-inbox
+    homepage: ''

@@ -1,0 +1,4 @@
+fields:
+    biography:
+        span: full
+        type: richtext
