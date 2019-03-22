@@ -1,0 +1,11 @@
+plugin:
+    name: 'tallpro.blogcomments::lang.plugin.name'
+    description: 'tallpro.blogcomments::lang.plugin.description'
+    author: Tallpro
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    comments:
+        label: Comments
+        url: tallpro/blogcomments/comments
+        icon: icon-file-text

@@ -1,0 +1,6 @@
+plugin:
+    name: 'ictsoft.blogfeaturedfiles::lang.plugin.name'
+    description: 'ictsoft.blogfeaturedfiles::lang.plugin.description'
+    author: ICTSoft
+    icon: oc-icon-adjust
+    homepage: 'http://ictsoft.in'

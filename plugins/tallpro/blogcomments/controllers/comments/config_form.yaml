@@ -1,0 +1,11 @@
+name: Comments
+form: $/tallpro/blogcomments/models/comments/fields.yaml
+modelClass: Tallpro\BlogComments\Models\Comments
+defaultRedirect: tallpro/blogcomments/comments
+create:
+    redirect: 'tallpro/blogcomments/comments/update/:id'
+    redirectClose: tallpro/blogcomments/comments
+update:
+    redirect: tallpro/blogcomments/comments
+    redirectClose: tallpro/blogcomments/comments
+preview: {  }

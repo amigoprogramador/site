@@ -1,0 +1,39 @@
+{% for post in posts %}
+<li>
+    <div class="comment" id="comment-{{post.id}}">
+
+        <section class="avatar">
+            {% if post.user and post.user.avatar %}
+            <div style="background-image: url({{post.user.avatar.path|raw}});"></div>
+            {% else %}
+            <div class="none"></div>
+            {% endif %}
+        </section>
+
+        <div class="comment-content">
+            <div class="comment-header">
+                <span class="comment-name">
+                    <strong>
+                    {% if post.user.name %}
+                        {{post.user.name}}
+                    {% else %}
+                        {{post.user_name}}
+                    {% endif %}
+                    </strong>
+                </span>
+                <a class="comment-date" href="#comment-{{post.id}}">
+                    {{post.created_at.diffForHumans}}
+                </a>
+            </div>
+            <div class="raw-comment">{{post.comment|raw}}</div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    {% if post.children %}
+    <ul>
+        {% partial "comments::list" posts=post.children %}
+    </ul>
+    {% endif %}
+</li>
+{% endfor %}

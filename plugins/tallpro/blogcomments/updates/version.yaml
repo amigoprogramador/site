@@ -1,0 +1,7 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table tallpro_blogcomments_comments'
+    - create_tallpro_blogcomments_comments.php
+1.0.3:
+    - 'Add more control to notifications in settings section + tidy up form'

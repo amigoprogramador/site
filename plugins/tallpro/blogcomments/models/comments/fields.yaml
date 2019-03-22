@@ -1,0 +1,14 @@
+fields:
+    comment:
+        label: Comment
+        size: ''
+        span: auto
+        type: textarea
+    status:
+        label: Status
+        options:
+            1: Approved
+            2: Pending
+            3: Span
+        span: auto
+        type: dropdown

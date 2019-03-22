@@ -1,0 +1,8 @@
+columns:
+    comment:
+        label: Comment
+        type: text
+        searchable: true
+    created_at:
+        label: Date
+        type: datetime

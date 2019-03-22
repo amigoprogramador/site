@@ -1,0 +1,43 @@
+<div class="comments-block">
+    {% if user or guest %}
+    {{ form_ajax('onComment', {flash: true, id: 'comment_form', validate: true}) }}
+    <div data-validate-error></div>
+
+    {% if user == null %}
+
+    <label for="tallpro_comments_user_name">
+        Your name
+        <input type="text" id="tallpro_comments_user_name" name="user_name"/>
+    </label>
+    <br>
+    <label for="tallpro_comments_user_email">
+        Your Email address
+        <input type="text" id="tallpro_comments_user_email" name="user_email"/>
+    </label>
+    <br>
+
+    {% endif %}
+
+    <label for="tallpro_comments_comment-text">
+        Comment
+        <textarea class="form-control" id="tallpro_comments_comment-text" name="comment" cols="50"
+                  rows="10"></textarea>
+    </label>
+    <input name="post_id" type="hidden" value="0">
+    <br>
+    <button type="submit" data-attach-loading class='btn btn-default' id="send-comment">Send</button>
+    <br>
+    <div id="message"></div>
+    <br>
+    {{ form_close() }}
+
+    {% else %}
+    <div class="notification">
+        {% if login_notification %}
+        {{login_notification|raw}}
+        {% else %}
+        Please <a href="{{url('/login')}}">Login</a> to leave a comment
+        {% endif %}
+    </div>
+    {% endif %}
+</div>

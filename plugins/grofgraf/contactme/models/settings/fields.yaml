@@ -1,0 +1,105 @@
+tabs:
+  fields:
+    name:
+      label: 'Name'
+      comment: 'Recipient name'
+      type: "text"
+      tab: General
+    email:
+      label: 'Email'
+      comment: 'Recipient email'
+      type: "text"
+      tab: General
+    name_label:
+      label: 'Name Label'
+      comment: 'Text for name label'
+      type: "text"
+      tab: General
+    email_label:
+      label: 'Email Label'
+      comment: 'Text for email label'
+      type: "text"
+      tab: General
+    message_label:
+      label: 'Message Label'
+      comment: 'Text for message label'
+      type: "text"
+      tab: General
+    button_text:
+      label: 'Send Button'
+      comment: 'Text for send button'
+      type: text
+      tab: General
+    confirmation_message:
+      label: 'Confirmation message'
+      comment: 'Message that will appear after successful contact'
+      type: richeditor
+      tab: General
+    enable_file_upload:
+      label: "Enable file upload"
+      comment: "Enable file upload for attachments"
+      type: switch
+      default: true
+      tab: File Upload
+    attachment_label:
+      label: 'Attachment Label'
+      comment: 'Text for attachment label'
+      type: "text"
+      tab: File Upload
+    enable_captcha:
+      label: "Enable captcha"
+      comment: "Enable captcha validation on contact form"
+      type: switch
+      default: false
+      tab: Captcha
+    captcha_label:
+      label: "Captcha Label"
+      comment: "Text for captcha label"
+      type: "text"
+      tab: Captcha
+    captcha_site_key:
+      label: "Captcha site key"
+      comment: "Site key for captcha validation"
+      type: text
+      tab: Captcha
+    captcha_secret_key:
+      label: "Captcha secret key"
+      comment: "Secret key for captcha validation"
+      type: text
+      tab: Captcha
+    enable_auto_reply:
+      label: "Enable Auto-Reply"
+      comment: "Enable automatic reply email"
+      type: switch
+      tab: Auto-Reply
+    enable_auto_reply_attachment:
+      label: "Append Attachment"
+      comment: "Append attachment to Auto-Reply if exist"
+      type: switch
+      tab: Auto-Reply
+    auto_reply_subject:
+      label: "Auto-Reply Subject"
+      comment: "Subject of automatic reply email"
+      type: text
+      tab: Auto-Reply
+    auto_reply_content:
+      label: "Auto-Reply Content"
+      commentHtml: true
+      comment: "<div class='help-block'>Content of automatic reply email. Available variables in auto reply email:<ul><li>{{ name }} - Name of sender</li><li>{{ email }} - Email of sender</li><li>{{ message_content }} - Content of sent email</li></ul></div>"
+      type: richeditor
+      tab: Auto-Reply
+    auto_subscribe:
+      label: Enable Auto Subscribe
+      comment: "Enable automatic subscribe to maillist when contacted"
+      type: switch
+      tab: Maillist
+    maillist_title:
+      label: Maillist Title
+      comment: "Title of maillist (if empty default MailgunSubscribe maillist will be used)"
+      type: text
+      tab: Maillist
+    maillist_subscribe_label:
+      label: Agree to subscribtion label
+      comment: "Label for agree with subscribtion checkbox. (If checkbox doesn't exist, and subscription will be enabled, automatic subscribe will happen)"
+      type: text
+      tab: Maillist

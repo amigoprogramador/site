@@ -1,0 +1,28 @@
+fields:
+    allow_guest:
+        span: left
+        label: tallpro.blogcomments::lang.settings.allow_guest_label
+        commentAbove: tallpro.blogcomments::lang.settings.allow_guest_above
+        type: switch
+    status:
+        span: right
+        label: tallpro.blogcomments::lang.settings.status_label
+        commentAbove: tallpro.blogcomments::lang.settings.status_above
+        type: dropdown
+    login_notification:
+        span: full
+        label: tallpro.blogcomments::lang.settings.login_notification
+        commentAbove: tallpro.blogcomments::lang.settings.login_notification_comment
+        type: richeditor
+    approved_notification:
+        span: left
+        label: tallpro.blogcomments::lang.settings.approved_notification
+        commentAbove: tallpro.blogcomments::lang.settings.approved_notification_comment
+        type: text
+        default: 'Thanks for your comment!'
+    pending_notification:
+        span: right
+        label: tallpro.blogcomments::lang.settings.pending_notification
+        commentAbove: tallpro.blogcomments::lang.settings.pending_notification_comment
+        type: text
+        default: 'Thank you! We are reviewing your comment now!'

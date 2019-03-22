@@ -1,0 +1,6 @@
+1.0.1:
+    - Initialize plugin.
+    - add_featuredfiles_fields_to_blog_table.php
+1.0.2: Fixes exception "Invalid argument supplied for foreach()" thrown during the template rendering
+1.0.3: Remove unknown fields in background page
+        

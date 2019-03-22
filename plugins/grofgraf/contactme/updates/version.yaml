@@ -1,0 +1,22 @@
+1.0.1: First version of ContactMe
+1.0.2:
+  - Captcha credentials can be empty if captcha not enabled
+1.0.3:
+  - Component namespace error fixed
+1.0.4:
+  - Auto subscribe error fixed
+  - Added maillist title field
+1.0.5:
+  - Customer name is posted to maillist
+1.0.6:
+  - Synchronized with latest MailgunSubscribe update
+1.0.7:
+  - Added post() information to message and auto reply
+1.0.8:
+  - Added variables to automatic reply email template
+1.0.9:
+  - Registered permissions
+1.1.0:
+  - Fixed permission
+1.1.1.:
+  - Optional maillist subscribe consent field
