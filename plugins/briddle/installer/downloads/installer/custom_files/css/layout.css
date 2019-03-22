@@ -1,0 +1,33 @@
+header h1 {
+    background-image: url('../images/logo.png');
+}
+
+#wrap:before {
+    /*background-image: url('../images/skyline.png');*/
+}
+
+header {
+    /*background-image: url('../images/stars.png');*/
+}
+
+section.title:before {
+    /*background-image: url('../images/clouds.png');*/
+}
+
+.cloud-content:before {
+    /*background-image: url('../images/clouds-content.gif');*/
+}
+
+footer {
+    /*background-image: url('../images/grass.png');*/
+}
+
+footer .container:after {
+    /*background-image: url('../images/tree.png');*/
+}
+
+/* Steps */
+section.title .steps .pass p {
+    background: #344A5F;
+    border-color: #344A5F;
+}

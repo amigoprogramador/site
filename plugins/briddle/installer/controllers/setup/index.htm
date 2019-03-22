@@ -1,0 +1,89 @@
+<?php 
+use Briddle\Installer\Models\Settings;
+$title =  Settings::get('title', '');
+$theme =  Settings::get('theme', '');
+$plugins = Settings::get('plugins', '');
+$themes = Settings::get('themes', '');
+?>
+
+<div class="control-breadcrumb">
+    <ul>
+        <li><a href="<?= Backend::url('system/settings') ?>">System</a></li>
+        <li><?= Lang::get('briddle.installer::lang.plugin.name') ?></li>
+    </ul>
+</div>
+
+<h1><?= Lang::get('briddle.installer::lang.plugin.name') ?></h1>
+<p>
+    <?= Lang::get('briddle.installer::lang.plugin.description') ?>
+</p>
+
+<div class="control-tabs primary-tabs" data-control="tab">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#primaryTabOne">Create installer</a></li>
+        <li><a href="#primaryTabTwo">Download installer</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active">
+            
+            <?= Form::open(['class'=>'layout']) ?>
+            
+            <div class="layout-row">
+                
+                <div class="form-group span-left">
+                    <label>Title</label>
+                    <input type="text" name="title" value="<?= $title ?>" class="form-control" />
+                    <p class="help-block">The title of your installer (e.g. Briddle Installation).</p>
+                </div>
+                <div class="form-group dropdown-field span-right">
+                    <label>Theme</label>
+                    <select name="theme" class="form-control custom-select">
+                        <option selected="selected" value="default">Default</option>
+                    </select>
+                    <p class="help-block">The theme you want to use.</p>
+                </div>                
+                <div class="form-group span-left">
+                    <label>Plugins</label>
+                    <input type="text" name="plugins" value="<?= $plugins ?>" class="form-control" />
+                    <p class="help-block">A comma seperated list of plugins you want to include (e.g. Briddle.Workflow,Briddle.Omnipay).</p>
+                </div>
+                <div class="form-group span-right">
+                    <label>Themes</label>
+                    <input type="text" name="themes" value="<?= $themes ?>" class="form-control" />
+                    <p class="help-block">A comma seperated list of themes you want to include (e.g. Briddle.booktheme).</p>
+                </div>
+                
+            </div>
+        
+            <div class="form-buttons">
+                <div class="loading-indicator-container">
+                    <button
+                        type="button"
+                        data-request="onSave"
+                        data-request-data="close:true"
+                        data-hotkey="ctrl+enter, cmd+enter"
+                        data-load-indicator="Creating Configuration..."
+                        class="btn btn-primary">
+                        Create installer
+                    </button>
+                </div>
+            </div>
+            
+            <?= Form::close() ?>
+            
+        </div>
+        <div class="tab-pane">
+
+            <div class="callout callout-info no-subheader">
+                <div class="header">
+                    <i class="icon-info"></i>
+                    <h3>Combine the contents of this .zip archive with the default installer from October. Instead of calling install.php (the default installer for October CMS) you now call <strong>setup.php</strong>.</h3>
+                </div>
+            </div>
+            <p>
+                <a href="<?= Backend::url('briddle/installer/download') ?>" class="btn btn-primary">Download</a>
+            </p>
+
+        </div>
+    </div>
+</div>

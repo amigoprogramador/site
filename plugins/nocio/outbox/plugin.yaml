@@ -1,0 +1,17 @@
+plugin:
+    name: 'nocio.outbox::lang.plugin.name'
+    description: 'nocio.outbox::lang.plugin.description'
+    author: noc.io
+    icon: oc-icon-envelope-o
+    homepage: 'https://github.com/nocio/oc-outbox-plugin'
+permissions:
+    nocio.outbox.access:
+        tab: 'nocio.outbox::lang.outbox.tab'
+        label: 'nocio.outbox::lang.outbox.access'
+navigation:
+    composer:
+        label: 'Outbox'
+        url: nocio/outbox/composer
+        icon: icon-envelope-o
+        permissions:
+            - nocio.outbox.access

@@ -1,0 +1,10 @@
+plugin:
+    name: 'briddle.installer::lang.plugin.name'
+    description: 'briddle.installer::lang.plugin.description'
+    author: Briddle
+    icon: oc-icon-magic
+    homepage: 'https://www.briddle.nl'
+permissions:
+    installers:
+        tab: 'briddle.installer::lang.plugin.name'
+        label: 'briddle.installer::lang.permissions.manage'

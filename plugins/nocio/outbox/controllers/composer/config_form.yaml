@@ -1,0 +1,28 @@
+fields:
+    to:
+        label: To
+        span: left
+        required: 1
+        type: text
+    from:
+        label: From
+        span: right
+        type: text
+    cc:
+        label: CC
+        span: left
+        type: text
+    bcc:
+        label: BCC
+        span: right
+        type: text
+    subject:
+        label: Subject
+        span: full
+        required: 1
+        type: text
+    message:
+        label: Message
+        span: full
+        type: richeditor
+        toolbarButtons: fullscreen|bold|italic|underline|strikeThrough|subscript|superscript|fontFamily|fontSize|||color|inlineStyle|paragraphStyle|||paragraphFormat|align|formatOL|formatUL|outdent|indent|quote|insertHR|insertLink|insertTable|undo|redo|clearFormatting|selectAll|html

@@ -1,0 +1,38 @@
+<div class="control-breadcrumb">
+    <ul>
+        <li><a href="<?= Backend::url('system/settings') ?>">System</a></li>
+        <li><?= Lang::get('briddle.export::lang.plugin.name') ?></li>
+    </ul>
+</div>
+
+<h1><?= Lang::get('briddle.export::lang.plugin.name') ?></h1>
+<p>
+    <?= Lang::get('briddle.export::lang.plugin.description') ?>
+</p>
+
+<div class="control-tabs primary-tabs" data-control="tab">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#primaryTabOne"><?= Lang::get('briddle.export::lang.plugin.plugins') ?></a></li>
+        <li><a href="#primaryTabTwo"><?= Lang::get('briddle.export::lang.plugin.themes') ?></a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active">
+            <h2><?= Lang::get('briddle.export::lang.plugin.plugins') ?></h2>
+            <p>
+                <?= Lang::get('briddle.export::lang.plugin.notice') ?>
+            </p>
+            <p>
+                <a class="btn btn-primary" href="<?= Backend::url('briddle/export/plugins') ?>" role="button"><?= Lang::get('briddle.export::lang.plugin.download') ?></a>
+            </p>
+        </div>
+        <div class="tab-pane">
+            <h2><?= Lang::get('briddle.export::lang.plugin.themes') ?></h2>
+            <p>
+                <?= Lang::get('briddle.export::lang.plugin.notice') ?>
+            </p>
+            <p>
+                <a class="btn btn-primary" href="<?= Backend::url('briddle/export/themes') ?>" role="button"><?= Lang::get('briddle.export::lang.plugin.download') ?></a>
+            </p>
+        </div>
+    </div>
+</div>
