@@ -1,0 +1,11 @@
+
+<form method="post" class="form-inline" id="newsletter-subscription-form">
+	<p>
+		<i class="mc4wp-form-icon ui-email"></i>
+		<input type="email" class="form-control" name="email" placeholder="Seu melhor email" required="">
+	</p>
+	<input type="submit" class="btn btn-md btn-color" value="Inscrever-se"
+        data-request="{{__SELF__}}::onSignup"
+        data-request-success="alert('Obrigado! Por favor, confirme sua assinatura clicando no link de confirmação em seu email.'); $('newsletter-subscription-form input').val(''); $('#subscribe-modal .close').click();" >
+</form> 
+

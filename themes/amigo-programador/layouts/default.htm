@@ -30,6 +30,8 @@ github = 1
 linkTarget = "_blank"
 
 [fontAwesomeCssLink]
+
+[Signup NewsletterSubscriptionForm]
 ==
 <!DOCTYPE html>
 <html lang="en">
@@ -63,7 +65,6 @@ linkTarget = "_blank"
     <!-- Lazyload -->
     <script src="{{ 'assets/js/lazysizes.min.js'|theme }}"></script>
 </head>
-
 <body class="bg-darker">
 
   <!-- Preloader -->
@@ -81,7 +82,7 @@ linkTarget = "_blank"
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="subscribeModalLabel">Subscribe for Newsletter</h5>
+          <h5 class="modal-title" id="subscribeModalLabel">Receba atualizações por email</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -90,11 +91,7 @@ linkTarget = "_blank"
           <form class="mc4wp-form" method="post">
             <div class="mc4wp-form-fields">
               <p>
-                <i class="mc4wp-form-icon ui-email"></i>
-                <input type="email" name="EMAIL" placeholder="Your email" required="">
-              </p>
-              <p>
-                <input type="submit" class="btn btn-md btn-color" value="Subscribe">
+                {% component 'NewsletterSubscriptionForm' %}
               </p>
             </div>
           </form>
@@ -159,7 +156,7 @@ linkTarget = "_blank"
             </div>
 
             <div class="nav__right-item">
-              <a href="" class="nav__subscribe" data-toggle="modal" data-target="#subscribe-modal">Subscribe</a>
+              <a href="" class="nav__subscribe" data-toggle="modal" data-target="#subscribe-modal">Newsletter</a>
             </div>
 
             <!-- Search -->
