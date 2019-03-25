@@ -18,6 +18,18 @@ listItemClasses = "sidenav__menu-link"
 primaryClasses = "sidenav__menu"
 secondaryClasses = "sidenav__menu-dropdown"
 numberOfLevels = 2
+
+[linkList RedesSociais]
+linkTarget = "_blank"
+
+[linkList SocialIcons]
+facebook = 1
+linkedin = 1
+slack = 1
+github = 1
+linkTarget = "_blank"
+
+[fontAwesomeCssLink]
 ==
 <!DOCTYPE html>
 <html lang="en">
@@ -31,6 +43,7 @@ numberOfLevels = 2
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="icon" type="image/png" href="{{ 'assets/images/logo.png'|theme }}" />
     {% styles %}
+    {% component 'fontAwesomeCssLink' %}
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Poppins:400,600,700%7CRoboto:400,400i,700' rel='stylesheet'>
     
@@ -108,15 +121,7 @@ numberOfLevels = 2
     </nav>
 
     <div class="socials sidenav__socials "> 
-      <a class="social-facebook" href="#" target="_blank" aria-label="facebook">
-        <i class="ui-facebook"></i>
-      </a>
-      <a class="social-twitter" href="#" target="_blank" aria-label="twitter">
-        <i class="ui-twitter"></i>
-      </a>
-      <a class="social-youtube" href="#" target="_blank" aria-label="youtube">
-        <i class="ui-youtube"></i>
-      </a>
+      {% component 'SocialIcons' %}
     </div>
   </header> <!-- end mobile sidenav -->
 
@@ -150,15 +155,7 @@ numberOfLevels = 2
 
             <!-- Socials -->
             <div class="nav__right-item socials socials--nobase nav__socials "> 
-              <a class="social-facebook" href="#" target="_blank">
-                <i class="ui-facebook"></i>
-              </a>
-              <a class="social-twitter" href="#" target="_blank">
-                <i class="ui-twitter"></i>
-              </a>
-              <a class="social-youtube" href="#" target="_blank">
-                <i class="ui-youtube"></i>
-              </a>
+              {% component 'SocialIcons' %}
             </div>
 
             <div class="nav__right-item">

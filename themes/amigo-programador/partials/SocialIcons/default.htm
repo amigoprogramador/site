@@ -1,0 +1,9 @@
+{% set links = __SELF__.links %}
+
+{% if links | length %}
+	{% for link in links %}
+	    <a class="social-{{ link.getName|lowercase }}" target="{{ __SELF__.linkTarget }}" href="{{ link.getLink }}" title="{{ link.getName }}" aria-label="{{ link.getName|lowercase }}">
+           <i class="{{ link.getIcon }}"></i>
+        </a>
+	{% endfor %}
+{% endif %}
